@@ -27,12 +27,9 @@ public class Main {
     // Traversal 3 -> Sort
     int count = 0;
     for (int i = 0; i < freqArr.length; i++) {
-
-      int loop = freqArr[i];
-      int toAddElement = i + min;
-      while (loop > 0) {
-        arr[count] = toAddElement;
-        loop--;
+      int val = i + min;
+      for (int j = 0; j < freqArr[i]; j++) {
+        arr[count] = val;
         count++;
       }
     }
