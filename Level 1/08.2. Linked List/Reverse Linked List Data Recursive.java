@@ -52,5 +52,5 @@ public void reverseDR(Node left, int counter) {
 public void reverseDR() {
   right = head;
   Node left = head;
-  reverseDR(left, right, 0);
+  reverseDR(right, 0);
 }
