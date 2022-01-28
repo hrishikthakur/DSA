@@ -40,9 +40,9 @@ public void swap(Node leftNode, Node rightNode) {
 static Node right;
 public void reverseDR(Node left, int counter) {
   if (left == null) {
-    return right;
+    return;
   }
-  right = reverseDR(left.next, right, counter + 1);
+  reverseDR(left.next, right, counter + 1);
   if (counter < size / 2) {
     swap(left, right);
   }
