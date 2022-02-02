@@ -4,24 +4,20 @@ public static class TwoStack {
   int tos2;
 
   public TwoStack(int cap) {
-    // write your code here
     data = new int[cap];
     tos1 = -1;
     tos2 = data.length;
   }
 
   int size1() {
-    // write your code here
     return tos1 + 1;
   }
 
   int size2() {
-    // write your code here
-    return (data.length - 1) - tos2;
+    return data.length - tos2;
   }
 
   void push1(int val) {
-    // write your code here
     if (tos1 + 1 == tos2) {
       System.out.println("Stack overflow");
       return;
@@ -31,7 +27,6 @@ public static class TwoStack {
   }
 
   void push2(int val) {
-    // write your code here
     if (tos2 - 1 == tos1) {
       System.out.println("Stack overflow");
       return;
@@ -41,7 +36,6 @@ public static class TwoStack {
   }
 
   int pop1() {
-    // write your code here
     if (tos1 == -1) {
       System.out.println("Stack underflow");
       return -1;
@@ -51,7 +45,6 @@ public static class TwoStack {
   }
 
   int pop2() {
-    // write your code here
     if (tos2 == data.length) {
       System.out.println("Stack underflow");
       return -1;
@@ -61,7 +54,6 @@ public static class TwoStack {
   }
 
   int top1() {
-    // write your code here
     if (tos1 == -1) {
       System.out.println("Stack underflow");
       return -1;
@@ -70,7 +62,6 @@ public static class TwoStack {
   }
 
   int top2() {
-    // write your code here
     if (tos2 == data.length) {
       System.out.println("Stack underflow");
       return -1;
