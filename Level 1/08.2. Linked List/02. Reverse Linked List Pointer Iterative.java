@@ -13,7 +13,8 @@ public void reversePI() {
     prev = curr;
     curr = ahead;
   }
-  //swap(head,tail);  this won't work work ???
+
+  //swap(head,tail);  this won't work work ??? -> sir ka chal gya tha
   Node temp = head;
   head = tail;
   tail = temp;

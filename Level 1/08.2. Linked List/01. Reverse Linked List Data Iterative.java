@@ -30,6 +30,7 @@ public void swap(Node leftNode, Node rightNode) {
   rightNode.data = leftData;
 }
 
+// reverseDataIterative
 public void reverseDI() {
   int left = 0;
   int right = size - 1;

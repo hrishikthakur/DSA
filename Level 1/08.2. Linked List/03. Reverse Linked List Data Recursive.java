@@ -1,5 +1,6 @@
 // Method -> 1 -> Incorrect approach
 // Modifying the local parameter right = right.next;
+// Changes will be gone once the stack is popped off
 
 // Method -> 2
 // Return the left pointer to save the changes made in one recursion stack
