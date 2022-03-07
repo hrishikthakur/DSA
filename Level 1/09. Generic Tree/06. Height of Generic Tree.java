@@ -26,7 +26,7 @@ public int height(Node root) {
     if (root == null) return 0;
     int height = -1;
     for (Node child : root.children) {
-        height = Math.max(height, maxDepth(child));
+        height = Math.max(height, height(child));
     }
     return height + 1;
 }
