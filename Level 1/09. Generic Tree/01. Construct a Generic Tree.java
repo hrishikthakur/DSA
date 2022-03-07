@@ -25,3 +25,26 @@ public static Node construct(int[] arr) {
     }
     return root;
 }
+
+// Method 2 -> (Sumeet Sir)connect parent node to the child while returning
+// first nodes are created and then the links are connected when -1 is hit
+public static node construct(int[] arr) {
+    Node root = null;
+
+    Stack<Node> stk = new Stack<>();
+    for (int i = 0; i < arr.length; i++) {
+
+        if (arr[i] == -1) {
+            Node leaf = stk.pop();
+            if (stk.size() == 0) {
+                // current node is the root node
+                root = leaf;
+            } else stk.peek().children.add(leaf); // else the peek element is the parent of the leaf
+        }
+
+        else {
+            Node newNode = new Node(arr[i]);
+            stk.push(newNode);
+        }
+    }
+}
