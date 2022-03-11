@@ -27,3 +27,16 @@ public static void linearize(Node node) {
 }
 
 // Method 2 -> O(N)
+public static Node linearizeOpt(Node node) {
+  if (node.children.size() == 0) return node;
+
+  Node lastTreeTail = linearizeOpt(node.children.get(node.children.size() - 1));
+
+  while (node.children.size() > 1) {
+    Node lastTreeHead = node.children.remove(node.children.size() - 1);
+    Node secondLastTreeTail = linearizeOpt(node.children.get(node.children.size() - 1));
+    secondLastTreeTail.children.add(lastTreeHead);
+  }
+
+  return lastTreeTail;
+}
