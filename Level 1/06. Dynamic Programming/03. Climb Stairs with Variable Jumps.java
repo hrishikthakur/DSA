@@ -68,7 +68,7 @@ public static int csvjTab(int dest, int[] arr) {
             // dp.length - 1 is the target stair
             // dp array is 1 greater than the input array
             if (i + jumps < dp.length) {
-                // dp[x] me padha hai x se targetStair takk jaane k paths
+                // dp[x] me padha kya hai? ... x se targetStair takk jaane k paths
                 totalPaths += dp[i + jumps];
             }
         }
